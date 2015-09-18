@@ -17,23 +17,21 @@
 // Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
 
 
-// This module provides types that are intrinsic in GIR, so they do not
-// get defined through other types. It should ultimately have a name defined
-// for every basic type listed in the documentation:
-// https://wiki.gnome.org/Projects/GObjectIntrospection/Annotations#Default_Basic_Types
-//
-// Exceptions are:
-// 1. Fixed-size integer types. These have straightforward machine-independent
-//    counterparts in Rust.
-// 2. Strings annotated as "utf8" or "filename". These types are not named
-//    as such in the C API, being only aliases for gchar*.
-//    Their representation in Rust is quite intricate and involves multiple
-//    types, so they each get their own module.
-//
-// Rust aliases are needed for machine-dependent basic types used in GIR,
-// since the GLib types are not necessarily identical to their Rust namesakes
-// (the issue similarly addressed by libc::c_int and the like).
-// GIR uses the GLib names for these types as well.
+//! This crate provides definitions for types that are intrinsic in
+//! GObject introspection, unlike all other types that have a definition in
+//! a GIR file. All crates generated from GObject introspection data should
+//! use these shared definitions, usable in FFI declarations as well as
+//! in idiomatic Rust bindings.
+//!
+//! Some types are omitted because a suitable equivalent is readily available
+//! in Rust:
+//!
+//! 1. Fixed-size integer types. These have straightforward built-in
+//!    counterparts in Rust.
+//! 2. Strings can have GI types `utf8` or `filename`. In the FFI all string
+//!    values are represented as raw pointers to `gchar`. A safe
+//!    representation of C strings in idiomatic Rust bindings
+//!    needs some wrapper types which are not defined here.
 
 #![allow(non_camel_case_types)]
 
