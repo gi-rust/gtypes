@@ -58,5 +58,9 @@ pub type gunichar       = u32;
 pub type gpointer       = *mut   libc::c_void;
 pub type gconstpointer  = *const libc::c_void;
 
+// GType is considered a fundamental type and used by the unqualified name
+// in GIR files, despite being also defined in both GLib and GObject.
+pub type GType = gsize;
+
 pub const FALSE: gboolean = 0;
 pub const TRUE : gboolean = 1;
