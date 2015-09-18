@@ -35,7 +35,7 @@
 
 #![allow(non_camel_case_types)]
 
-use libc;
+extern crate libc;
 
 pub type gboolean       = libc::c_int;
 pub type gchar          = libc::c_char;
