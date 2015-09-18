@@ -4,6 +4,10 @@ version = "0.1.0-dev"
 authors = ["Mikhail Zabaluev <mikhail.zabaluev@gmail.com"]
 license = "LGPL-2.1+"
 
+description = "Fundamental type definitions for GLib-based APIs."
+
+repository = "https://github.com/gi-rust/gtypes.git"
+
 [lib]
 path = "gtypes.rs"
 
