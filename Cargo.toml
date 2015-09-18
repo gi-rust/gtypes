@@ -1,0 +1,11 @@
+[package]
+name = "gtypes"
+version = "0.1.0-dev"
+authors = ["Mikhail Zabaluev <mikhail.zabaluev@gmail.com"]
+license = "LGPL-2.1+"
+
+[lib]
+path = "gtypes.rs"
+
+[dependencies]
+libc = "0.1"
