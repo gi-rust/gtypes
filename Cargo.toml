@@ -1,6 +1,6 @@
 [package]
 name = "gtypes"
-version = "0.1.1-dev"
+version = "0.1.1"
 authors = ["Mikhail Zabaluev <mikhail.zabaluev@gmail.com"]
 license = "LGPL-2.1+"
 
