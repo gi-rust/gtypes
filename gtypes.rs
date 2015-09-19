@@ -79,6 +79,8 @@ pub mod primitive {
 // For -sys crates only dealing with FFI types, all public names defined
 // in this crate should be conflict-free, so we make them available at the
 // crate level handy for glob-importing.
+// FIXME: Can't glob-import due to https://github.com/rust-lang/rust/issues/4865,
+// which is fixed by Rust 1.4.0
 pub use primitive::{gboolean, gchar, guchar, gshort, gushort, gint, guint};
 pub use primitive::{glong, gulong, gsize, gssize, gintptr, guintptr};
 pub use primitive::{gfloat, gdouble, gunichar, gpointer, gconstpointer};
