@@ -16,7 +16,8 @@
 // License along with this library; if not, write to the Free Software
 // Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
 
-
+//! Fundamental types for GLib and GObject introspection.
+//!
 //! This crate provides definitions for types that are intrinsic in
 //! GObject introspection, unlike all other types that have a definition in
 //! a GIR file. All crates generated from GObject introspection data should
@@ -38,18 +39,17 @@ extern crate libc;
 // the Python module giscanner.ast, part of gobject-introspection tools:
 // https://git.gnome.org/browse/gobject-introspection/tree/giscanner/ast.py
 
+/// Definitions for primitive fundamental types.
+///
+/// Values of these types don't have associated semantics or state
+/// that would necessitate some kind of wrapper types in safe Rust
+/// bindings. Therefore, these types can be used in both
+/// FFI declarations and idiomatic Rust bindings, unlikely to require
+/// name disambiguation with any generated or binding types.
+///
+/// The untyped pointer types are also defined in this module,
+/// because safe Rust bindings are unlikely to need to reuse their names.
 pub mod primitive {
-
-    //! Definitions for primitive fundamental types.
-    //!
-    //! Values of these types don't have associated semantics or state
-    //! that would necessitate some kind of wrapper types in safe Rust
-    //! bindings. Therefore, these types can be used in both
-    //! FFI declarations and idiomatic Rust bindings, unlikely to require
-    //! name disambiguation with any generated or binding types.
-    //!
-    //! The untyped pointer types are also defined in this module,
-    //! because safe Rust bindings are unlikely to need to reuse their names.
 
     #![allow(non_camel_case_types)]
 
