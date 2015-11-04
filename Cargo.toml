@@ -1,6 +1,6 @@
 [package]
 name = "gtypes"
-version = "0.1.2"
+version = "0.2.0-dev"
 authors = ["Mikhail Zabaluev <mikhail.zabaluev@gmail.com>"]
 license = "LGPL-2.1+"
 
@@ -12,4 +12,4 @@ repository = "https://github.com/gi-rust/gtypes.git"
 path = "gtypes.rs"
 
 [dependencies]
-libc = "0.1"
+libc = "0.2"
